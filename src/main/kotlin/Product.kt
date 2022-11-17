@@ -7,7 +7,7 @@ class Product(info_string: String) {
     init {
         InitialString = info_string.trim()
 
-        if ((InitialString == "") || (InitialString.indexOf(" ") == -1)) {
+        if ((InitialString.isBlank()) || (InitialString.indexOf(" ") == -1)) {
             FormatIsBroken = true
         } else {
             Name = InitialString.substring(0, InitialString.indexOf(" "))
